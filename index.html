@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBão</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section>
+        <div class="top">
+            <h4>API Pokemon:</h4>
+            <label for="pokemon">Nome ou id do Pokemon:</label>
+            <input id="pokemon" type="text">
+            <button id="poke-button" type="button">Buscar</button>
+            <h5>Pokemon:</h5>
+            <img id="poke-img" src="" alt="imagem do pokemon ">
+            <img  id="poke-img2" src="" alt="pokemon shiny">
+            <img id="poke-img3" src="" alt="pokemon versao">
+            <div id="poke-info">
+                <p><strong>Nome:</strong> <span id="poke-nome"></span></p>
+                <p><strong>ID:</strong> <span id="poke-id"></span></p>
+                <p><strong>Tipo(s):</strong> <span id="poke-tipos"></span></p>
+                <p><strong>Altura:</strong> <span id="poke-altura"></span></p>
+                <p><strong>Peso:</strong> <span id="poke-peso"></span></p>
+                <p><strong>Aparições em jogos:</strong> <span id="poke-games" class="badge bg-secondary"></span></p>
+                <p><strong>Habilidades:</strong><span id="poke-ability"></span></p>
+            </div>
+            <h4>API Studio Ghibli:</h4>
+            <label for="filme">Nome do filme Em Inglês:</label>
+            <input id="filme" type="text">
+            <button id="busca-button" type="button">Buscar</button>
+
+            <h5>Filme:</h5>
+            <img id="filme-img" src="" alt="poster do filme">
+            <div id="filme-info">
+                <p><strong>Título:</strong> <span id="filme-titulo"></span></p>
+                <p><strong>Diretor:</strong> <span id="filme-diretor"></span></p>
+                <p><strong>Ano:</strong> <span id="filme-ano"></span></p>
+                <p><strong>Duração:</strong> <span id="filme-duracao"></span></p>
+                <p><strong>Nota (Rotten Tomatoes):</strong> <span id="filme-nota"></span></p>
+                <p><strong>Descrição:</strong> <span id="filme-descricao"></span></p>
+            </div>
+        </div>
+
+    </section>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>

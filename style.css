@@ -1,0 +1,51 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial;
+    padding: 20px;
+}
+
+section {
+    width: 600px;
+    margin: auto;
+}
+
+.top {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h4 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    width: 65%;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #3b5ba9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2c437d;
+}
+
+img {
+    max-width: 200px;
+    margin: 10px 0;
+}
+
+p {
+    margin: 8px 0;
+}
