@@ -11,20 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 return alert("Campo de nome/id vazio!");
             }
 
-            // Busca dados do Pokémon
             let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeInputText}`);
             if (!response.ok) {
                 throw new Error("Pokémon não encontrado!");
             }
             let data = await response.json();
 
-            // Atualiza Sprites
+            
             document.getElementById("poke-img").src = data.sprites.other["showdown"].front_default || data.sprites.front_default || "";
             document.getElementById("poke-img1").src = data.sprites.other["showdown"].back_default || data.sprites.back_default || "";
             document.getElementById("poke-img2").src = data.sprites.other["showdown"].front_shiny || data.sprites.front_shiny || "";
             document.getElementById("poke-img3").src = data.sprites.other["showdown"].back_shiny || data.sprites.back_shiny || "";
 
-            // Atualiza Informações do Pokémon
             document.getElementById("poke-nome").textContent = data.name.toUpperCase();
             document.getElementById("poke-id").textContent = data.id;
             document.getElementById("poke-tipos").textContent = data.types.map(t => t.type.name).join(", ");
@@ -33,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById("poke-games").textContent = data.game_indices.length + " jogos";
             document.getElementById("poke-ability").textContent = data.abilities.map(t => t.ability.name).join(", ");
 
-            // Busca automática das fraquezas, resistências e imunidades dos tipos
+            
             let fraquezasSet = new Set();
             let resistenciasSet = new Set();
             let imunidadesSet = new Set();
