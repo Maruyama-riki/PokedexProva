@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeBão</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section>
         <div class="top">
             <h4>API Pokemon:</h4>
             <label for="pokemon">Nome ou id do Pokemon:</label>
-            <input id="pokemon" type="text">
-            <button id="poke-button" type="button">Buscar</button>
+            <div class="d-flex gap-2 w-100 justify-content-center mb-3">
+                <input id="pokemon" type="text" placeholder="Ex: pikachu ou 25">
+                <button id="poke-button" type="button">Buscar</button>
+            </div>
+
             <h5>Pokemon:</h5>
-            <img id="poke-img" src="" alt="imagem do pokemon ">
-            <img id="poke-img1" src="" alt="imagem do pokemon 1 ">
-            <img  id="poke-img2" src="" alt="pokemon shiny">
-            <img id="poke-img3" src="" alt="pokemon versao">
+            <div>
+                <img id="poke-img" src="" alt="imagem do pokemon ">
+                <img id="poke-img1" src="" alt="imagem do pokemon 1 ">
+                <img id="poke-img2" src="" alt="pokemon shiny">
+                <img id="poke-img3" src="" alt="pokemon versao">
+            </div>
+
             <div id="poke-info">
                 <p><strong>Nome:</strong> <span id="poke-nome"></span></p>
                 <p><strong>ID:</strong> <span id="poke-id"></span></p>
@@ -27,10 +34,19 @@
                 <p><strong>Peso:</strong> <span id="poke-peso"></span></p>
                 <p><strong>Aparições em jogos:</strong> <span id="poke-games" class="badge bg-secondary"></span></p>
                 <p><strong>Habilidades:</strong><span id="poke-ability"></span></p>
-        </div>
+            </div>
 
+            <hr class="w-100">
+
+            <h5>Informações do Elemento:</h5>
+            <div id="tipo-info">
+                <p><strong>Fraquezas (recebe dano dobrado de):</strong> <span id="tipo-fraquezas"></span></p>
+                <p><strong>Resistências (recebe metade do dano de):</strong> <span id="tipo-resistencias"></span></p>
+                <p><strong>Imunidades (não recebe dano de):</strong> <span id="tipo-imunidades"></span></p>
+            </div>
+        </div>
     </section>
+
     <script src="./script.js"></script>
-    <link rel="stylesheet" href="style.css">
 </body>
 </html>
